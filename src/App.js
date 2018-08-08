@@ -30,7 +30,9 @@ class BooksApp extends React.Component {
         books={this.state.books}
         move={this.move}
         />*/}
-        <BookSearch />
+        <BookSearch
+        move={this.move}
+        />
 
       </div>
     )

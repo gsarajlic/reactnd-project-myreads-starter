@@ -18,7 +18,10 @@ class BookSearch extends Component {
   getBooks = (query) => {
     if (query) {
       BooksAPI.search(query).then((searchBooks) => {
-        this.setState({ searchBooks : searchBooks})
+        if(searchBooks.error) {
+          this.setState({ searchBooks: [] })
+        } else {
+          this.setState({ searchBooks : searchBooks})}
       })
     } else {
       this.setState({ searchBooks: [] })
@@ -48,6 +51,7 @@ class BookSearch extends Component {
                     <li key={ searchBooks.id }>
                       <Book 
                         book={searchBooks}
+                        move={this.props.move}
                       />
                     </li>
                   ))
