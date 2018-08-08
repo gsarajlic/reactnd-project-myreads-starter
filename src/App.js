@@ -7,23 +7,30 @@ import BookSearch from './BookSearch'
 class BooksApp extends React.Component {
   state = {
     books : []
-    //showSearchPage: false
   }
 
   componentDidMount() {
-    BooksAPI.getAll().then((books)=> {
-      this.setState({ books })
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books: books })
     })
   }
 
+  move = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+    
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books: books })
+    })
+  }
 
   render() {
-    
     return (
       <div className="app">
-        <BookShelf 
+        {/*<BookShelf 
         books={this.state.books}
-        />
+        move={this.move}
+        />*/}
+        <BookSearch />
 
       </div>
     )
