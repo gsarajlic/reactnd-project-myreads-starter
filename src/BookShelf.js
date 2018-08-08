@@ -55,9 +55,9 @@ class BookShelf extends Component {
                                     book => book.shelf === 'read').map( book => 
                                         <li key={book.id}>
                                             <Book 
-                                            book={book}
-                                            move={this.props.move}
-                                            currentShelf={'read'}                                            
+                                                book={book}
+                                                move={this.props.move}
+                                                currentShelf={'read'}                                            
                                             />
                                         </li>
                                     )
