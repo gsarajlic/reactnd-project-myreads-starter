@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 
+// This component represents single book
+// Retrieves infp about book and updates changes if needed
+
 class Book extends Component {
   render() {
     let thumbnail = this.props.book.imageLinks

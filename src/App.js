@@ -5,6 +5,9 @@ import BookShelf from './BookShelf'
 import BookSearch from './BookSearch'
 import {Route} from 'react-router-dom'
 
+// Main component of the application
+// Tracks books to be on the right shelf and move books from one to other shelf
+// Implement routing
 class BooksApp extends React.Component {
   state = {
     books: []

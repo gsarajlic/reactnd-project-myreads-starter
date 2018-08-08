@@ -3,6 +3,8 @@ import * as BooksAPI from './BooksAPI'
 import Book from './Book'
 import {Link} from 'react-router-dom'
 
+// Search page component displays the list of books matching users input
+
 class BookSearch extends Component {
   state = {
     query: '',
